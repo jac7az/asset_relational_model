@@ -35,7 +35,7 @@ Investing is a very popular and common way to expand one's finances, but it can 
 |-------------|---------------|
 |Beta|Measure of an asset's volatility in relation to the overall market to determine a stock or ETF's risk level
 |Compound Annual Growth Rate|Mean annual growth rate of an investment over time
-|Dividend Yield|
+|Dividend Yield|Ratio of cash dividends to the company's share price, expressed as a percentage.
 |Maximum Drawdown|Maximum loss from a peak to a trough of a portfolio before a new peak|
 |Sharpe Ratio|Measures risk-adjusted return and how much excess return a person receives for volatility endured|
 |Standard Deviation|Measures market volatility, representing how much an asset's price deviates from its average
