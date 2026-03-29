@@ -70,3 +70,33 @@ To account for this, all biases and potential limitations are disclosed, such as
 The transactions dataset was formed as synthetic data to create a theoretical snapshot of 2.8million transactions in a day. This was centered on a singular date to ensure that all transactions had a real price table range to compare against, instead of a completely random number through randomization that would've been impossible in reality.
 The decision to create an asset ID as a combination is from the observation that a ticker has many dates and dates have many tickers, but combined together, each instance will be unique, allowing for a primary key of that table to be formed. Similarly, with bond data that doesn't have a ticker, "yield" was used together with each unique date.
 As mentioned with the mutual fund data, due to resource and memory restrictions, the mutual fund dataset couldn't include all of the data, so the decision was made to cut the file to fit as much data as possible, with dataset L-P being the file that could allow all other data to fit, allowing the rest to be combined.
+
+## Metadata
+**ERD**
+
+|Table|Link|Description|
+|-----|----|-----------|
+|transactions|https://myuva-my.sharepoint.com/:x:/g/personal/jac7az_virginia_edu/IQDw4hMwlBjJTbItlHnx-ArcASUgp9XpSQYIpIQhO_sqT6g?e=z149QZ|Central table containing 2.8million synthetic trade records for 10/27/2015, linked to each asset by asset_id|
+|stocks|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCN6a1lU5ZcTbV2JigK1E36AfxKZqh8AtMMyhJQI-vSlFk?e=PVQ0tg|Containes historical stock price data, the date of information, listing highest & lowest stock price of the day, the starting opening and ending closing price, the volume of stocks traded and the ticker symbol representing the company|
+|etfs|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCJScmyL_Q1S7UJFR5SpgohAT71bSu93K2PKdd-0XfisXA?e=KzoliM|Table for Exchange Traded Funds historical data, including highest and lowest stock price of the day, the date of information, the starting opening and closing price, the volume of ETFs traded and the ticker symbol representing the portfolio|
+|bonds|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQAzIMRQob-USIw7FtK1xPjpAaUTSf9UqMAKcyj6V1kKSmI?e=HRs7SY|Table for 30-year US Treasury Yield bond data as a risk-free baseline
+|mf|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCPdAMwA2m8QZLHgAK_W9G8AVGafOuN1HVrQMx_ViR2-8I?e=occrhS|Table for mutual funds data, listing date of information, the net asset value per share and ticker symbol of mutual fund|
+#### Master Dictionary
+|Feature|Data Type|Description|Example|
+|-----|----|-----------|---|
+|transaction_id|int|Unique identifier for each individual transaction on that specific day|1687621|
+|account_id|int|The account number identifier for the user|1543|
+|asset_type|categorical|The type of financial asset|Stocks
+|asset_id|string|Key for unique asset and date, structured as TickerName_Year-Month-Day|AAPL_2015-10-27
+|ticker|string|Official market ticker symbol for the asset|AAPL
+|quantity|int|The amount of units or shares traded on the date|196
+|price|float|The price the transaction was made at for the asset|32.10
+|date|datetime|The date the record was produced|2015-10-27
+|nav_per_share|float|Net Asset Value per share used for mutual funds|32.98
+|open|float|The initial trading price when the market opens for the day|111.57
+|high|float|The highest traded price for the asset on the day|123.78
+|low|float|The lowest traded price for the asset on the day|7.23
+|close|float|The final price the asset was traded at before the market closed for the day|87.21
+|volume|int|The total number of shares or units transacted in the given date|168798431687
+|openint|int|Open interest, the total number of outstanding contracts|0
+|adj close|float|Closing price for bonds adjusted for corporate actions like dividends|78.21
