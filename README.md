@@ -76,11 +76,11 @@ As mentioned with the mutual fund data, due to resource and memory restrictions,
 
 |Table|Link|Description|
 |-----|----|-----------|
-|transactions|https://myuva-my.sharepoint.com/:x:/g/personal/jac7az_virginia_edu/IQDw4hMwlBjJTbItlHnx-ArcASUgp9XpSQYIpIQhO_sqT6g?e=z149QZ|Central table containing 2.8million synthetic trade records for 10/27/2015, linked to each asset by asset_id|
-|stocks|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCN6a1lU5ZcTbV2JigK1E36AfxKZqh8AtMMyhJQI-vSlFk?e=PVQ0tg|Containes historical stock price data, the date of information, listing highest & lowest stock price of the day, the starting opening and ending closing price, the volume of stocks traded and the ticker symbol representing the company|
-|etfs|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCJScmyL_Q1S7UJFR5SpgohAT71bSu93K2PKdd-0XfisXA?e=KzoliM|Table for Exchange Traded Funds historical data, including highest and lowest stock price of the day, the date of information, the starting opening and closing price, the volume of ETFs traded and the ticker symbol representing the portfolio|
-|bonds|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQAzIMRQob-USIw7FtK1xPjpAaUTSf9UqMAKcyj6V1kKSmI?e=HRs7SY|Table for 30-year US Treasury Yield bond data as a risk-free baseline
-|mf|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCPdAMwA2m8QZLHgAK_W9G8AVGafOuN1HVrQMx_ViR2-8I?e=occrhS|Table for mutual funds data, listing date of information, the net asset value per share and ticker symbol of mutual fund|
+|transactions|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQA_VkZs27M4Tb8e2voJOXHmAVmUkokL7xzfr590du0qBSI?e=YnfbIw|Central table containing 2.8million synthetic trade records for 10/27/2015, linked to each asset by asset_id|
+|stocks|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCOv0lq0Ur7TJ6KTEL3Tf1fAcA7MwWlWaNcb0piQ8ZfAXs?e=ATY8T7|Containes historical stock price data, the date of information, listing highest & lowest stock price of the day, the starting opening and ending closing price, the volume of stocks traded and the ticker symbol representing the company|
+|etfs|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQBn016fIuNbRIHUq99mfd4oARQwCTAJaCt6UKv5Q9yoJl0?e=z2nC5a|Table for Exchange Traded Funds historical data, including highest and lowest stock price of the day, the date of information, the starting opening and closing price, the volume of ETFs traded and the ticker symbol representing the portfolio|
+|bonds|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQDFZAmmxssbTogH0v0k7Pb2AeViHoCUOS6vUMbC5QIFzGY?e=cWecol|Table for 30-year US Treasury Yield bond data as a risk-free baseline
+|mf|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCTHdsyDL0jTJhuHdeTZAdAAfR7cuZCOPlOzMGYA63X33Q?e=Hz15rd|Table for mutual funds data, listing date of information, the net asset value per share and ticker symbol of mutual fund|
 #### Master Dictionary
 |Feature|Data Type|Description|Example|
 |-----|----|-----------|---|
