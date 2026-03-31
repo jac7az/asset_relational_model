@@ -72,7 +72,9 @@ The decision to create an asset ID as a combination is from the observation that
 As mentioned with the mutual fund data, due to resource and memory restrictions, the mutual fund dataset couldn't include all of the data, so the decision was made to cut the file to fit as much data as possible, with dataset L-P being the file that could allow all other data to fit, allowing the rest to be combined.
 
 ## Metadata
-**ERD**
+ERD
+<img width="1839" height="992" alt="image" src="https://github.com/user-attachments/assets/dd17b5f6-9e41-4c78-8538-c2712f78515b" />
+
 
 |Table|Link|Description|
 |-----|----|-----------|
