@@ -5,10 +5,12 @@ import pandas as pd
 import numpy as np
 # import gc
 
+#import data from online source
 path = kagglehub.dataset_download("borismarjanovic/price-volume-data-for-all-us-stocks-etfs")
 path_mf = kagglehub.dataset_download("stefanoleone992/mutual-funds-and-etfs")
 path_bonds = kagglehub.dataset_download("mukhazarahmad/22-years-of-us-treasury-bonds-data")
 
+#read data from stocks and etf website, convert to table and save as parquet
 stocks_path=os.path.join(path,"Data","Stocks")
 etfs_path=os.path.join(path,"Data","ETFs")
 def get_tables(file_path):
@@ -30,6 +32,7 @@ etfs['asset_id'] = etfs['ticker'].astype(str) + "_" + etfs['date'].astype(str)
 stocks.to_parquet('stocks.parquet')
 etfs.to_parquet('etfs.parquet')
 
+#read data from mutual fund website, convert to table and save as parquet
 mfae=pd.read_csv(os.path.join(path_mf,"MutualFund prices - A-E.csv"))
 mffk=pd.read_csv(os.path.join(path_mf,"MutualFund prices - F-K.csv"))
 mfqz=pd.read_csv(os.path.join(path_mf,"MutualFund prices - Q-Z.csv"))
@@ -38,6 +41,7 @@ mf['asset_id'] = mf['fund_symbol'].astype(str) + "_" + mf['price_date'].astype(s
 mf=mf.rename(columns={'price_date':'date','fund_symbol':'ticker'})
 mf.to_parquet('mf.parquet')
 
+#read data from treasury bonds website, convert to table and save as parquet
 bonds=pd.read_csv(os.path.join(path_bonds,"Treasury Yield 30 Years.csv"))
 bonds['asset_id'] = "yield" + "_" + bonds['Date'].astype(str)
 bonds['Date']=pd.to_datetime(bonds['Date'])
@@ -45,6 +49,7 @@ bonds['Date'] = bonds['Date'].dt.strftime('%Y-%m-%d')
 bonds.columns=[c.lower() for c in bonds.columns]
 bonds.to_parquet('bonds.parquet')
 
+#Create transaction table for 10/27/2006, selecting a random asset class and company, random price between the day's highest and lowest as potential transactions that can happen all in the day, then save as parquet
 np.random.default_rng(523)
 n=700000
 print("Stocks transaction")
