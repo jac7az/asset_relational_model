@@ -6,9 +6,9 @@
 * Pipeline
 * License: 
 ## Problem Definition
-The general problem is forecasting market prices, but the specific problem is forecasting the daily performance of a portfolio using U.S. Treasury bond yields, stock market data, and ETF data.
+The general problem is forecasting market prices, but the specific problem is comparing individual asset yield performance over 24 months against general market trends to illustrate volatility.
 
-The rationale behind this refinement is the problem with focusing on a single type of asset. It's prone to market-wide changes and is volatile. It can be predicted, but a single incident can change future predictions. By refining the focus to comparing ratios across different asset types, the approach shifts to comparing financial assets and identifying combinations that are overall more secure and practical to invest in than individual stock movements.
+The rationale behind this refinement is the problem with focusing on a single type of asset. It's prone to market-wide changes and is volatile. It can be predicted, but a single incident can change future predictions. By refining the focus to comparing ratios across asset types, the approach shifts to comparing financial assets and identifying combinations that are overall more secure and practical to invest in than individual stocks.
 
 Investing is a very popular and common way to expand one's finances, but it can be very difficult and confusing to know what and who to invest in. It's an expansive world even with proper knowledge, and taking on risk always means there are chances for loss, which is not what anyone wants. Investors, new and beginners investers especially, want high returns with financial security, but don't necessarily know where to start or what's best. By using historical data to build a robust model that can narrow down the highest security combinations, investors can make more data-driven, confident decisions without being exposed to unnecessary risk.
 
