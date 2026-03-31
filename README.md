@@ -1,7 +1,7 @@
 # DS4320 Project 1: 
 * Carissa Chen, jac7az
 * DOI: 
-* Press Release
+* [Press Release](https://github.com/jac7az/asset_relational_model/blob/764e32838acca083df828dc2c4081d29c54b3649/PressRease.md)
 * [Data](https://myuva-my.sharepoint.com/:f:/g/personal/jac7az_virginia_edu/IgA1d5U-5iH5T7CmRf6IUeZYAZKdqhgw6eprI8RFAJ2KFwA?e=MJDiqu)
 * Pipeline
 * License: 
