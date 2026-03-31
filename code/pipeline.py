@@ -9,12 +9,10 @@ import logging
 
 #Create someone's potential portfolio and establish logging file
 logging.basicConfig(
-    filename='pipeline.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    filemode='w' 
+    level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s',
+    filename='pipeline.log'
 )
-logger = logging.getLogger()
+logger = logging.getLogger(__name__)
 try: 
   holdings_df = pd.DataFrame({
       'ticker': ['AAPL', 'MSFT', 'GOOG', 'DRYS'],
