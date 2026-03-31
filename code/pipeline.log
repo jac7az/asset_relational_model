@@ -1,0 +1,6 @@
+2026-03-31 20:10:08,865 - INFO - Portfolio holdings defined.
+2026-03-31 20:10:09,893 - INFO - DuckDB connection established.
+2026-03-31 20:10:09,940 - ERROR - Pipeline failedIO Error: No files found that match the pattern "bonds.parquet"
+
+LINE 1: CREATE TABLE IF NOT EXISTS bonds AS SELECT * FROM read_parquet('bonds.parquet')
+                                                          ^
