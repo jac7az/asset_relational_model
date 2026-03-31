@@ -12,7 +12,7 @@ logging.basicConfig(
     filename='pipeline.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    filemode='w' # 'w' overwrites each run; use 'a' to append
+    filemode='w' 
 )
 logger = logging.getLogger()
 try: 
@@ -83,6 +83,6 @@ try:
 
   plt.tight_layout()
   logger.info("Visualization generated and saved as portfolio_chart.png.")
-  
+
 except Exception as e:
   logger.error(f"Pipeline failed{e}")
