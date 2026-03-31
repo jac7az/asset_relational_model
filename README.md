@@ -12,7 +12,7 @@ The rationale behind this refinement is the problem with focusing on a single ty
 
 Investing is a very popular and common way to expand one's finances, but it can be very difficult and confusing to know what and who to invest in. It's an expansive world even with proper knowledge, and taking on risk always means there are chances for loss, which is not what anyone wants. Investors, new and beginners investers especially, want high returns with financial security, but don't necessarily know where to start or what's best. By using historical data to build a robust model that can narrow down the highest security combinations, investors can make more data-driven, confident decisions without being exposed to unnecessary risk.
 
-[Headline]()
+[Headline!! New Relational Model Unveils the Hidden Risks of Individual Stock Portfolios]((https://github.com/jac7az/asset_relational_model/blob/764e32838acca083df828dc2c4081d29c54b3649/PressRease.md))
 
 ## Domain Exposition
 | Term          | Definition    |
