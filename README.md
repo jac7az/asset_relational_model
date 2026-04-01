@@ -79,10 +79,10 @@ ERD
 |Table|Link|Description|
 |-----|----|-----------|
 |transactions|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQA_VkZs27M4Tb8e2voJOXHmAVmUkokL7xzfr590du0qBSI?e=YnfbIw|Central table containing 2.8million synthetic trade records for 10/27/2015, linked to each asset by asset_id|
-|stocks|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCOv0lq0Ur7TJ6KTEL3Tf1fAcA7MwWlWaNcb0piQ8ZfAXs?e=ATY8T7|Containes historical stock price data, the date of information, listing highest & lowest stock price of the day, the starting opening and ending closing price, the volume of stocks traded and the ticker symbol representing the company|
-|etfs|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQBn016fIuNbRIHUq99mfd4oARQwCTAJaCt6UKv5Q9yoJl0?e=z2nC5a|Table for Exchange Traded Funds historical data, including highest and lowest stock price of the day, the date of information, the starting opening and closing price, the volume of ETFs traded and the ticker symbol representing the portfolio|
+|stocks|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCOv0lq0Ur7TJ6KTEL3Tf1fAcA7MwWlWaNcb0piQ8ZfAXs?e=ATY8T7|Containes historical stock price data, the date of information, listing the highest & lowest stock price of the day, the starting opening and ending closing price, the volume of stocks traded, and the ticker symbol representing the company|
+|etfs|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQBn016fIuNbRIHUq99mfd4oARQwCTAJaCt6UKv5Q9yoJl0?e=z2nC5a|Table for Exchange Traded Funds historical data, including the highest and lowest stock price of the day, the date of information, the starting opening and closing price, the volume of ETFs traded, and the ticker symbol representing the portfolio|
 |bonds|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQDFZAmmxssbTogH0v0k7Pb2AeViHoCUOS6vUMbC5QIFzGY?e=cWecol|Table for 30-year US Treasury Yield bond data as a risk-free baseline
-|mf|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCTHdsyDL0jTJhuHdeTZAdAAfR7cuZCOPlOzMGYA63X33Q?e=Hz15rd|Table for mutual funds data, listing date of information, the net asset value per share and ticker symbol of mutual fund|
+|mf|https://myuva-my.sharepoint.com/:u:/g/personal/jac7az_virginia_edu/IQCTHdsyDL0jTJhuHdeTZAdAAfR7cuZCOPlOzMGYA63X33Q?e=Hz15rd|Table for mutual funds data, listing date of information, the net asset value per share, and ticker symbol of mutual fund|
 #### Master Dictionary
 |Feature|Data Type|Description|Example|
 |-----|----|-----------|---|
@@ -102,3 +102,43 @@ ERD
 |volume|int|The total number of shares or units transacted in the given date|168798431687
 |openint|int|Open interest, the total number of outstanding contracts|0
 |adj close|float|Closing price for bonds adjusted for corporate actions like dividends|78.21
+### Uncertainty Tables
+#### Bonds
+|Feature|Mean|Standard Deviation|Min|Max|Interpretation|
+|---------------|---------------|---------------|---------------|---------------|---------------|
+|high|3.755|1.140|1.027|5.901|Moderate variability, with consistent upper-bounds|
+|low|3.694|1.314|0.837|5.844|Wider variation, implying occasional sharp dips in minimum pricing|
+|open|3.724|1.138|0.912|5.861|Moderate spread, relatively stable daily starting points|
+|close|3.724|1.137|0.937|5.894|Tighter range with stronger price consolidation at the end of the day|
+|adj close|3.724|1.137|0.937|5.894|Relatively consistent with minimal impacts from external adjustments|
+
+#### ETFs
+|Feature|Mean|Standard Deviation|Min|Max|Interpretation|
+|---------------|---------------|---------------|---------------|---------------|---------------|
+|high|2360.11|180338.3|0.2598|37152000|Extreme outliers with massive spread suggesting high volatility
+|low|2152.19|1.63720.5|0|33696000|Wide scale uncertainty with 0-floor values
+|open|2246.84|171063.1|0|34116000|Wide scale uncertainty spread with unpredictable points
+|close|2239.55|170777.5|0.2472|35304000|High variability relative to the mean
+|volume|1555495|11923500|0|1519430000|High volatility and variability suggesting massive spikes and dips
+|openint|0|0|0|0|Null feature with no data tracked|
+
+#### Stocks
+|Feature|Mean|Standard Deviation|Min|Max|Interpretation|
+|---------------|---------------|---------------|---------------|---------------|---------------|
+|open|3.0385.38|4202501|0|1423713000|Extreme unpredictable volatility with high max v. min|
+|high|31212.47|4323486|0.004|1442049000|Extreme volatility limits, indicating massive spikes|
+|low|29361.76|4046981|-1|1362118000|Erratic pricing, even with a negative minimum displaying a crash|
+|close|30245.22|4180590|0.0037|1437986000|High undertainty with strong deviations from averages|
+|volume|1585730|7635187|0|2423735000|High surges between days, dominated by potential outliers|
+|openint|0|0|0|0|Null feature with no data tracked|
+
+#### Mutual Funds
+|Feature|Mean|Standard Deviation|Min|Max|Interpretation|
+|---------------|---------------|---------------|---------------|---------------|---------------|
+|nav_per_share|34.44|1453.12|0|755250|Exterme outliers and high variance, indicating high risk profiles|
+
+#### Transactions
+|Feature|Mean|Standard Deviation|Min|Max|Interpretation|
+|---------------|---------------|---------------|---------------|---------------|---------------|
+|price|12126.588|1341966|0.21|150967600|Prices are heavily skewed by high-maximum asset prices
+|quantity|71.546|40.99|1|142|Consistent transaction sizes within a predefined range
