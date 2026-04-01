@@ -1,3 +1,4 @@
+```
 import duckdb
 import pandas as pd
 import numpy as np
@@ -6,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import logging
-
+```
 # Set up logging to a file to track pipeline execution
 logging.basicConfig(
     level=logging.INFO, 
