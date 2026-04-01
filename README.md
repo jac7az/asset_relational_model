@@ -5,6 +5,8 @@
 * [Data](https://myuva-my.sharepoint.com/:f:/g/personal/jac7az_virginia_edu/IgA1d5U-5iH5T7CmRf6IUeZYAZKdqhgw6eprI8RFAJ2KFwA?e=MJDiqu)
 * [Pipeline Files](https://github.com/jac7az/asset_relational_model/tree/fa6025ce72b9519ae4c428bd2b4cd81b086ba7f3/code)
 * [License](https://github.com/jac7az/asset_relational_model/blob/7cc527549592a3e585088adeb48d32ac2228bfbc/LICENSE)
+##### Executive Summary
+This repository includes a relational data model and analysis designed to evaluate portfolio strength by comparing multi-asset performance against broader market trends. Historical data ranging from 2000-2022, including Stocks, ETFs, Mutual Funds, and US Treasury Bonds, was entered into a unified database and the process of combining them. This repo also includes metadata explanation and domain exposition, with the structure of the tables, statistical uncertainty for each asset class, and links to resources, code process, and the data files themselves. 
 ## Problem Definition
 The general problem is forecasting market prices, but the specific problem is comparing individual asset yield performance over 24 months against general market trends to illustrate volatility.
 
