@@ -4,7 +4,7 @@
 * [Press Release](https://github.com/jac7az/asset_relational_model/blob/764e32838acca083df828dc2c4081d29c54b3649/PressRease.md)
 * [Data](https://myuva-my.sharepoint.com/:f:/g/personal/jac7az_virginia_edu/IgA1d5U-5iH5T7CmRf6IUeZYAZKdqhgw6eprI8RFAJ2KFwA?e=MJDiqu)
 * [Pipeline Files](https://github.com/jac7az/asset_relational_model/tree/fa6025ce72b9519ae4c428bd2b4cd81b086ba7f3/code)
-* License: 
+* [License](https://github.com/jac7az/asset_relational_model/blob/7cc527549592a3e585088adeb48d32ac2228bfbc/LICENSE)
 ## Problem Definition
 The general problem is forecasting market prices, but the specific problem is comparing individual asset yield performance over 24 months against general market trends to illustrate volatility.
 
