@@ -1,4 +1,4 @@
-# DS4320 Project 1: 
+# DS4320 Project 1: Analysis of Portfolio Resilience
 * Carissa Chen, jac7az
 * DOI: 
 * [Press Release](https://github.com/jac7az/asset_relational_model/blob/764e32838acca083df828dc2c4081d29c54b3649/PressRease.md)
